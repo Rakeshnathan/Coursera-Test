@@ -25,11 +25,12 @@ h1 {
 }
 
 .box {
-  background-color: #796d6d;
+  background-color: #797777;
   color: black;
-  border: 1px solid black;
-  padding: 20px;
-  height: 250px;
+  border: 3px solid black;
+  padding-top: 40px;
+  padding-left : 10px;
+  height: 180px;
   position: relative;
   flex: 0 0 32%;
   margin-bottom: 20px;
@@ -39,7 +40,7 @@ h1 {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 5px 10px;
+  padding: 5px 40px;
   border: 1px solid black;
   font-weight: bold;
   font-size: 1.25em;
@@ -48,26 +49,24 @@ h1 {
 }
 
 .title-chicken {
-  background-color: #f7b1a1;
+  background-color: #c98d80;
 }
 
 .title-beef {
-  background-color: #d9534f;
+  background-color: #b74743;
   color: white;
 }
 
 .title-sushi {
-  background-color: #f7e197;
+  background-color: #e1cd89;
 }
 
-/* Tablet view */
 @media (max-width: 991px) {
   .box {
     flex: 0 0 48%;
   }
 }
 
-/* Mobile view */
 @media (max-width: 767px) {
   .box {
     flex: 0 0 100%;

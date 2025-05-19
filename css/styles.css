@@ -1,71 +1,22 @@
-* {
+.row {
+  width: 100%;
+  overflow: hidden; /* Clearfix alternative */
+}
+
+.col-lg-4, .col-md-6, .col-md-12, .col-sm-12 {
+  float: left;
+  padding: 10px; /* Give some spacing inside */
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-}
-
-h1 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 40px;
-}
-
-.row {
-  width: 100%;
-}
-
-/* Section styles */
-.box {
-  border: 1px solid black;
-  background-color: #d3d3d3; /* gray background */
-  margin: 10px;
-  padding: 20px;
-  position: relative;
-  height: 250px;
-  overflow: hidden;
-}
-
-.title {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 5px 15px;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  font-weight: bold;
-  font-size: 1.25em;
-  background-color: #ccc;
-}
-
-.title.chicken {
-  background-color: #f7b6b6; /* light red */
-}
-
-.title.beef {
-  background-color: #e66a6a; /* darker red */
-  color: white;
-}
-
-.title.sushi {
-  background-color: #f5e88a; /* light yellow */
-}
-
-/* Layout for large screens (≥992px) */
 @media (min-width: 992px) {
   .col-lg-4 {
-    float: left;
-    width: 33.33%;
+    width: 33.33%; /* 3 columns in a row */
   }
 }
 
-/* Layout for medium screens (768px–991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-6 {
-    float: left;
     width: 50%;
   }
   .col-md-12 {
@@ -74,9 +25,9 @@ h1 {
   }
 }
 
-/* Layout for small screens (<768px) */
 @media (max-width: 767px) {
   .col-sm-12 {
     width: 100%;
+    clear: both;
   }
 }

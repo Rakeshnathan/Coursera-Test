@@ -1,4 +1,3 @@
-/* Base styles */
 * {
   box-sizing: border-box;
 }
@@ -11,94 +10,73 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 2em; /* 75% larger than default */
-  margin-bottom: 30px;
+  font-size: 2em;
+  margin-bottom: 40px;
 }
 
-.section-container {
+.row {
   width: 100%;
 }
 
-/* Section styling */
+/* Section styles */
 .box {
-  background-color: #f0f0f0;
   border: 1px solid black;
-  padding: 20px;
+  background-color: #d3d3d3; /* gray background */
   margin: 10px;
+  padding: 20px;
   position: relative;
+  height: 250px;
+  overflow: hidden;
 }
 
-.box .title {
-  background-color: #cfc;
-  border: 1px solid black;
+.title {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 5px 10px;
-  font-size: 1.25em; /* 25% larger than default */
+  padding: 5px 15px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
   font-weight: bold;
+  font-size: 1.25em;
+  background-color: #ccc;
 }
 
-/* Specific section colors */
-#chicken .title {
-  background-color: #ffcccb;
+.title.chicken {
+  background-color: #f7b6b6; /* light red */
 }
 
-#beef .title {
-  background-color: #d3d3ff;
+.title.beef {
+  background-color: #e66a6a; /* darker red */
+  color: white;
 }
 
-#sushi .title {
-  background-color: #ccffcc;
+.title.sushi {
+  background-color: #f5e88a; /* light yellow */
 }
 
-/* Mobile view: ≤ 767px */
-@media (max-width: 767px) {
-  .box {
-    width: 100%;
-    float: none;
-  }
-}
-
-/* Tablet view: 768px - 991px */
-@media (min-width: 768px) and (max-width: 991px) {
-  #chicken, #beef {
-    width: 48%;
+/* Layout for large screens (≥992px) */
+@media (min-width: 992px) {
+  .col-lg-4 {
     float: left;
-    margin-right: 2%;
+    width: 33.33%;
   }
+}
 
-  #beef {
-    margin-right: 0;
+/* Layout for medium screens (768px–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6 {
+    float: left;
+    width: 50%;
   }
-
-  #sushi {
+  .col-md-12 {
     width: 100%;
     clear: both;
   }
 }
 
-/* Desktop view: ≥ 992px */
-@media (min-width: 992px) {
-  .box {
-    width: 31%;
-    float: left;
-    margin-right: 3.5%;
-  }
-
-  .box:last-child {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 991px) {
-    .section {
-        flex: 1 1 45%;  /* Tablet view */
-    }
-}
-
+/* Layout for small screens (<768px) */
 @media (max-width: 767px) {
-    .section {
-        flex: 1 1 100%;  /* Mobile view */
-    }
+  .col-sm-12 {
+    width: 100%;
+  }
 }
